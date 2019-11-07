@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Create your models here.
 class Student(models.Model):
-     stud_id = models.IntegerField(max_length=6,primary_key=True)
+     stud_id = models.IntegerField(primary_key=True)
      firstName = models.CharField(max_length=200)
      lastName = models.CharField(max_length=200)
      email= models.CharField(max_length=50)
@@ -11,7 +11,7 @@ class Student(models.Model):
      dateOfIssue = models.DateTimeField(default= datetime.now,blank=True)
      dateOfExpiry = models.DateTimeField()
      courseOfStudy = models.CharField(max_length=200)
-     isValid = models.BooleanField()
+     isCardValid = models.BooleanField()
      isApproved = models. BooleanField()
      startingpoint1 = models.CharField(max_length=250)
      endingpoint1 = models.CharField(max_length=250)
@@ -25,5 +25,5 @@ class Student(models.Model):
      startingpoint4 = models.CharField(max_length=250)
      endingpoint4 = models.CharField(max_length=250)
 
-     def __self(self):
-         return self.stud_id
+     def __str__(self):
+          return self.stud_id
