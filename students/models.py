@@ -2,12 +2,16 @@ from django.db import models
 from datetime import datetime
 
 # Create your models here.
+def uploadImage(instance,filename):
+     return "students/photos/{firstName} {lastName}/{filename}".format(firstName=instance.firstName,lastName=instance.lastName,filename=filename)
+
 class Student(models.Model):
-     stud_id = models.IntegerField(primary_key=True)
+     sid = models.IntegerField(primary_key=True)
      firstName = models.CharField(max_length=200)
      lastName = models.CharField(max_length=200)
-     email= models.CharField(max_length=50)
+     email= models.CharField(max_length=50,unique=True)
      dob = models.DateField()
+     image = models.ImageField(upload_to=uploadImage,blank=True,null = True)
      # age = models.IntegerField(null=False)
      nameOfInstitution = models.CharField(max_length=200)
      courseOfStudy = models.CharField(max_length=200)

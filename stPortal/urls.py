@@ -18,8 +18,12 @@ from django.urls import path,include
 from rest_framework.urlpatterns import format_suffix_patterns
 
 from students import views
+from rtOfficer import views as Views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('students/', views.StudentList.as_view()),
+
+    path('', Views.ApplicationList.as_view()),
 ]
