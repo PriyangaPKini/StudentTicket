@@ -24,5 +24,5 @@ class Student(models.Model):
      stop4 = models.CharField(max_length=250, blank=True)
 
      def __str__(self):
-          return self.firstName +" " + self.lastName
+          return  self.firstName +" " + self.lastName
 
