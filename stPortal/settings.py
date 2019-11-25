@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['priyanga-g6z5.localhost.run',
                  'priyanga-yfho.localhost.run',
+'127.0.0.1',
 
                  ]
 

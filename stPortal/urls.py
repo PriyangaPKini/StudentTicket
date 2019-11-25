@@ -23,13 +23,13 @@ from students import views
 from complaint import views as ComplaintView
 from rtOfficer import views as officerDisplay
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('complaint/', ComplaintView.ComplaintList.as_view()),
 
     path('students/', views.StudentList.as_view()),
 
     path('rto/', include('rtOfficer.urls')),
 
-    path('', ComplaintView.ComplaintList.as_view()),
+    path('',  admin.site.urls),
 
 
     # path('', officerDisplay.ApplicationList.as_view()),

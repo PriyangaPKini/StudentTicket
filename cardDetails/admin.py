@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import CardDetails
+from . models import CardInfo
 
 # Register your models here.
-admin.site.register(CardDetails)
+admin.site.register(CardInfo)

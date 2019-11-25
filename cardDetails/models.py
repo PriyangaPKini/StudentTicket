@@ -1,6 +1,6 @@
 from django.db import models
 
-class CardDetails(models.Model):
+class CardInfo(models.Model):
     isApproved = models.BooleanField(default=False)
     dateOfIssue = models.DateField(null=True)
     dateOfExpiry = models.DateField(null=True)
