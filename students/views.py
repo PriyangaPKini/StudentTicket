@@ -6,13 +6,15 @@ from rest_framework.response import Response
 from rest_framework import status
 from . models import Student
 from .serializers import StudentSerializer
+from rest_framework import generics
 
-# Create your views here.
+class StudentList(generics.ListCreateAPIView):
+    """Get/Add request
+    get:
+    Get all camps
+    post:
+    Add a camp
+    """
 
-class StudentList(APIView):
-    def get(self, request):
-        student1 = Student.objects.all()
-        serializer = StudentSerializer(student1,many=True)
-        return Response(serializer.data)
-    def post(self):
-        pass
+    serializer_class = StudentSerializer
+    queryset = Student.objects.all()

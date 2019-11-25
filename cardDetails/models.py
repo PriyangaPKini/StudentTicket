@@ -7,5 +7,5 @@ class CardDetails(models.Model):
     isCardValid = models.BooleanField(null=True, default=True)
 
     def __str__(self):
-          return " "
+          return f'{self.id}'
 

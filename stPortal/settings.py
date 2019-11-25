@@ -25,7 +25,10 @@ SECRET_KEY = '!k80x-(n@^=u!_=4lt_u7ea08mrhydl4@bimomylw2_393brr+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['priyanga-g6z5.localhost.run',
+                 'priyanga-yfho.localhost.run',
+
+                 ]
 
 
 # Application definition

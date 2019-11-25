@@ -17,16 +17,22 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework.urlpatterns import format_suffix_patterns
 
-# from . students import views
+
 # from . rtOfficer import views as officerDisplay
 from students import views
+from complaint import views as ComplaintView
 from rtOfficer import views as officerDisplay
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('students/', views.StudentList.as_view()),
 
-    path('', officerDisplay.ApplicationList.as_view()),
+    path('rto/', include('rtOfficer.urls')),
+
+    path('', ComplaintView.ComplaintList.as_view()),
+
+
+    # path('', officerDisplay.ApplicationList.as_view()),
 
 
 ]
