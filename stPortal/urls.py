@@ -27,4 +27,6 @@ urlpatterns = [
     path('students/', views.StudentList.as_view()),
 
     path('', officerDisplay.ApplicationList.as_view()),
+
+
 ]
