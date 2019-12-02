@@ -20,11 +20,5 @@ from rest_framework import generics
 
 
 class ComplaintList(generics.ListCreateAPIView):
-    """Get/Add request
-    get:
-    Get all camps
-    post:
-    Add a camp
-    """
     serializer_class = ComplaintSerializer
     queryset = Complaint.objects.all()
